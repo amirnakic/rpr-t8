@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121">
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal8.Controller">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="0.0" prefWidth="78.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.0" minWidth="10.0" prefWidth="398.0" />
@@ -21,9 +21,9 @@
   </rowConstraints>
    <children>
       <Label alignment="CENTER" prefHeight="17.0" prefWidth="83.0" text="Uzorak:" />
-      <TextField prefHeight="25.0" prefWidth="299.0" GridPane.columnIndex="1" />
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Traži" GridPane.columnIndex="2" />
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <TextField fx:id="searchField" prefHeight="25.0" prefWidth="299.0" GridPane.columnIndex="1" />
+      <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#clickOnSearchBtn" prefHeight="25.0" prefWidth="87.0" text="Traži" GridPane.columnIndex="2" />
+      <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
