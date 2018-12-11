@@ -57,5 +57,8 @@ public class Controller {
     }
 
     public void clickOnSearchBtn(ActionEvent actionEvent) {
+        Runnable r = () -> dajFajloveKojiSePodudaraju(new File(System.getProperty("user.home")));
+        Thread thread = new Thread(r);
+        thread.start();
     }
 }
