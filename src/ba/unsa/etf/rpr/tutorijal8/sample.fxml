@@ -26,7 +26,7 @@
       <Label alignment="CENTER" prefHeight="24.0" prefWidth="50.0" text="Uzorak:" />
       <TextField fx:id="searchField" prefHeight="25.0" prefWidth="299.0" GridPane.columnIndex="1" />
       <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#clickOnSearchBtn" prefHeight="25.0" prefWidth="87.0" text="Traži" GridPane.columnIndex="2" />
-      <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+      <ListView fx:id="list" onMouseClicked="#clickonListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="1" />
       <Button fx:id="stopButton" mnemonicParsing="false" onAction="#clickOnStopButton" prefHeight="25.0" prefWidth="60.0" text="Prekini" GridPane.columnIndex="3" />
       <ProgressBar fx:id="progressBar" prefHeight="18.0" prefWidth="582.0" progress="0.0" GridPane.columnSpan="4" GridPane.rowIndex="2" />
    </children>

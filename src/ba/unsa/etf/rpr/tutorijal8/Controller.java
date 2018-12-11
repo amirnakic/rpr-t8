@@ -6,16 +6,23 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
 public class Controller {
     public SimpleStringProperty text;
@@ -27,7 +34,7 @@ public class Controller {
     public Button stopButton;
     public ProgressBar progressBar;
     public boolean prekidanje = false;
-
+    NoviController noviController;
     private Thread thread1, thread2;
 
     public Controller() {
@@ -103,6 +110,22 @@ public class Controller {
             searchBtn.setDisable(false);
             searchField.setDisable(false);
             stopButton.setDisable(true);
+        }
+    }
+
+    public void clickonListView(MouseEvent mouseEvent) {
+        Parent root = null;
+        try {
+            Stage myStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("noviprozor.fxml"));
+            loader.load();
+            noviController = loader.getController();
+            myStage.setTitle("Slanje datoteke");
+            myStage.setScene(new Scene(loader.getRoot(), USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            myStage.setResizable(false);
+            myStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
