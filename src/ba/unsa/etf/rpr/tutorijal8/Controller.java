@@ -105,7 +105,7 @@ public class Controller {
     }
 
     public void clickOnStopButton(ActionEvent actionEvent) {
-        if (thread1!= null || thread2!=null) {
+        if (thread1 != null || thread2 != null) {
             prekidanje = true;
             searchBtn.setDisable(false);
             searchField.setDisable(false);
